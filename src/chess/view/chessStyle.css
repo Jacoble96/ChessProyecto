@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23/03/2019, 09:54:24 PM
+    Author     : Ivannia Rojas
+*/
+*{
+    -fx-text-fill: black;
+    -fx-font: bold 12pt "Berlin Sans FB" ;
+}
+
+.cellBoard{
+  /* -fx-background-color: burlywood;*/
+    -fx-background-color: #cccccc;
+}
+.cellBoard:hover{
+   /* -fx-background-color: #333300;*/
+   -fx-background-color: chocolate;
+}
+
+.cell2Board{
+   -fx-background-color: #333333;
+    /*-fx-background-color: #604020;/*#2d1606*/
+    
+}
+.cell2Board:hover{
+    -fx-background-color: chocolate;
+    /*-fx-background-color: #333300;*/
+}
+.possMov{
+   -fx-border-height: 1px;
+    -fx-border-width: 1px;
+    -fx-border-color:  black;
+    -fx-background-color: #333300;
+    -fx-opacity:0.90;
+    /*-fx-background-color:#336600;*/
+    
+    
+}
+.poss{
+    -fx-border-height: 1px;
+    -fx-border-width: 1px;
+    -fx-border-color:  #333300; 
+}
+.possMovFalse{
+   -fx-border-height: 1px;
+    -fx-border-width: 1px;
+    -fx-border-color:  black;
+     -fx-background-color:#660000;
+}
+
+.possMovDrag{
+   -fx-border-height: 1px;
+    -fx-border-width: 1px;
+    -fx-border-color:  black;
+    /* -fx-background-color:#999900;*/
+    -fx-background-color: #663300;
+    -fx-opacity:0.90;
+
+}
+
+
+.lb_chronometer{
+    -fx-border-width: 3px;
+    -fx-border-height: 3px;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-text-fill:white;
+    -fx-background-color: linear-gradient(#999999 1%,  black 95%);/* #333333 2%,  black 95%*/
+    
+}
+
+.fp_containerPieces{
+   
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+#fp_containerWhitePieces{
+    -fx-background-color: #000000;
+}
+#fp_containerBlackPieces{
+    -fx-background-color: #ffffff;
+}
+
+.button{
+    -fx-text-fill:white;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-background-color: #cccccc;
+    -fx-background-color: linear-gradient(  #663300 1%,  black 95%);/* #999999 2%,  black 95%*/
+}
+#btn_player{
+    -fx-text-fill:white;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-background-color: linear-gradient(   chocolate 1%,  black 95%);/* #999999 2%,  black 95%*/
+}
+
+.st_blackBackground{
+    -fx-background-color:black;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+}
+#txt_rules{
+    -fx-text-fill: white;
+}
+#text_timeTurn{
+     -fx-text-fill: white;
+}
+.lb_jaque{
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-background-color:#cc6600;
+}
+
+.lb_player{
+     -fx-text-fill: #663300;
+    -fx-font: bold 18pt "Berlin Sans FB" ;
+     -fx-background-color:black;
+     -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+}		

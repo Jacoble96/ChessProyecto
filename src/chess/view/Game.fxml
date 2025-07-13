@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chess.controller.GameController">
+   <children>
+      <HBox fx:id="hb_game" alignment="CENTER" prefHeight="628.0" prefWidth="1001.0" StackPane.alignment="CENTER">
+         <children>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="590.0" prefWidth="232.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane prefHeight="145.0" prefWidth="224.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="161.0" prefWidth="234.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="lb_player1" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="120.0" styleClass="lb_player" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lb_whitePlayer" alignment="CENTER" contentDisplay="CENTER" prefHeight="34.0" prefWidth="212.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lb_whiteScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="54.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </StackPane>
+                  <Label fx:id="lb_graphicWhiteJaque" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="100.0" styleClass="lb_jaque" visible="false" />
+                  <StackPane prefHeight="250.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FlowPane fx:id="fp_containerBlackPieces" hgap="10.0" opacity="0.85" prefHeight="150.0" prefWidth="211.0" styleClass="fp_containerPieces" vgap="10.0">
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></FlowPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets bottom="50.0" top="10.0" />
+               </padding>
+            </VBox>
+            <StackPane prefHeight="602.0" prefWidth="640.0">
+               <children>
+                  <AnchorPane fx:id="ap_board" prefHeight="602.0" prefWidth="581.0" StackPane.alignment="CENTER">
+                     <children>
+                        <TilePane fx:id="tp_boardGraphic" alignment="CENTER" layoutX="56.0" layoutY="61.0" prefColumns="8" prefHeight="480.0" prefRows="8" prefWidth="480.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="60.0" />
+                        <VBox fx:id="vb_numbers1" alignment="CENTER" layoutX="28.0" layoutY="49.0" prefHeight="504.0" prefWidth="28.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="8" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="7" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="6" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="5" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="4" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="3.0" text="3" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="2" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="1" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <HBox fx:id="hb_letters1" layoutX="29.0" layoutY="539.0" prefHeight="28.0" prefWidth="534.0">
+                           <children>
+                              <Label prefWidth="28.0" text="  " />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="4.0" prefWidth="60.0" text="A" />
+                              <Label alignment="CENTER" prefHeight="2.0" prefWidth="60.0" text="B" />
+                              <Label alignment="CENTER" prefHeight="9.0" prefWidth="60.0" text="C" />
+                              <Label alignment="CENTER" prefHeight="4.0" prefWidth="60.0" text="D" />
+                              <Label alignment="CENTER" prefHeight="2.0" prefWidth="60.0" text="E" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="F" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="G" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="H" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="vb_numbers2" alignment="CENTER" layoutX="546.0" layoutY="49.0" prefHeight="504.0" prefWidth="35.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="1" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="2" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="3" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="4" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="5" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="6" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="7" VBox.vgrow="ALWAYS" />
+                              <Label alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="0.0" text="8" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <HBox fx:id="hb_letters2" alignment="CENTER_RIGHT" layoutX="44.0" layoutY="32.0" prefHeight="34.0" prefWidth="514.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="1.0" prefWidth="60.0" text="H" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="G" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="F" />
+                              <Label alignment="CENTER" prefHeight="0.0" prefWidth="60.0" text="E" />
+                              <Label alignment="CENTER" prefWidth="60.0" text="D" />
+                              <Label alignment="CENTER" prefWidth="60.0" text="C" />
+                              <Label alignment="CENTER" prefWidth="60.0" text="B" />
+                              <Label alignment="CENTER" prefWidth="60.0" text="A" />
+                              <Label prefWidth="28.0" text="  " />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+            <VBox alignment="BOTTOM_CENTER" prefHeight="602.0" prefWidth="233.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane prefHeight="145.0" prefWidth="224.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="161.0" prefWidth="234.0">
+                           <children>
+                              <Label fx:id="lb_player2" alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="120.0" styleClass="lb_player" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lb_blackPlayer" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="203.0" VBox.vgrow="ALWAYS" />
+                              <Label fx:id="lb_blackScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="53.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                  </StackPane>
+                  <Label fx:id="lb_graphicBlackJaque" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="100.0" styleClass="lb_jaque" visible="false" />
+                  <StackPane prefHeight="250.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <FlowPane fx:id="fp_containerWhitePieces" hgap="10.0" opacity="0.85" prefHeight="150.0" prefWidth="211.0" styleClass="fp_containerPieces" vgap="10.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></FlowPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="40.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </HBox>
+   </children>
+</StackPane>
