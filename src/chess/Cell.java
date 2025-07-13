@@ -176,6 +176,7 @@ public class Cell extends StackPane {
                         ((GameController) FlowController.getInstance().getController("Game")).capturedPieces(true);
                         Animation.getInstance().rotarNodo((Piece) AppContext.getInstance().get("piece"));
                         ((GameController) FlowController.getInstance().getController("Game")).calculateValuesPieces(true);
+                        
 
                         ////El equipo negro captura piezas blancas
                     } else if (cell.getPieces() != null && cell.getPieces().getIsWhite()) {//si está apuntando a una pieza y si la pieza es blanca.
@@ -202,6 +203,7 @@ public class Cell extends StackPane {
                     }
 
                     turn();//Cambia de turno cada vez que el jugador realiza una jugada.
+                    ((GameController) FlowController.getInstance().getController("Game")).checkEndGame();
 
                 }//fin movimiento posible
 

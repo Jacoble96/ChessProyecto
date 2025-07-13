@@ -177,6 +177,49 @@ public class GameController extends Controller implements Initializable {
         }
 
     }
+    
+    public void checkEndGame() {
+        
+        Cell[][] board = logicBoard.getBoard();
+        int whiteCount =0;
+        int blackCount =0;
+        
+        for(int i = 0; i < 8; i++) {
+            for(int j = 0; j < 8; j++) {
+                if (board[i][j].getIsOccupied()){
+                    Piece p = board[i][j].getPieces();
+                    if (p.getIsWhite()){
+                        whiteCount++;                   
+                    }
+                    else{
+                        blackCount++;                   
+                    }               
+                }                
+            }            
+        } 
+        
+        if (whiteCount ==0 || blackCount == 0){
+              String winner;
+            if (whiteCount == 0) {
+              winner = "Equipo negro";
+            } 
+            else {
+             winner = "Equipo blanco";
+            }
+            
+            javafx.application.Platform.runLater(() -> {
+                javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+                alert.setTitle("Fin de partida");
+                alert.setHeaderText(null);
+                alert.setContentText("¡Juego terminado! Ha ganado: " + winner);
+                alert.showAndWait();
+            });
+            
+            
+        }                      
+    }
+    
+  
 
     public void setVisibleUp(Boolean visible) {
         vb_numbers2.setVisible(visible);
@@ -351,7 +394,6 @@ public class GameController extends Controller implements Initializable {
     public void resetCalculateValuesPieces() {
         lb_whiteScore.setText("");
         lb_blackScore.setText("");
-
     }
-
+    
 }
