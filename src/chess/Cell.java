@@ -161,6 +161,22 @@ public class Cell extends StackPane {
 
             Dragboard db = e.getDragboard();
             boolean success = false;
+            
+            GameController controller = (GameController) FlowController.getInstance().getController("Game");
+            boolean esTurnoBlancas = controller.isTurnWhite(); 
+            Piece piezaArrastrada = (Piece) AppContext.getInstance().get("piece");
+
+            // Verificar si el jugador está moviendo una pieza que no le corresponde
+            if (piezaArrastrada.getIsWhite() != esTurnoBlancas) {
+                // Cancelar el movimiento si no es su turno
+                System.out.println("Movimiento inválido: no es tu turno");
+                e.setDropCompleted(false);
+                e.consume();
+                return;
+            }
+            
+            
+            
             if (db.hasImage()) {
 
                 if (cell.getIsPossibleMov() == true) {
